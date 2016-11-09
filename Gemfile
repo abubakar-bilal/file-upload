@@ -49,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "paperclip", "~> 5.0.0"
 gem 'pg'
 gem 'rails_12factor', group: [:production]
+gem "paperclip-ffmpeg", "~> 1.0.1"

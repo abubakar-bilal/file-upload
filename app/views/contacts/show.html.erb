@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 Name: <%= @contact.name %><br/>
-File: <%= image_tag @contact.avatar(:thumb) %><br/>
+File:
+<% if @contact.avatar.content_type =~ /image/ %>
+  <%= image_tag @contact.avatar %><br/>
+<% else %>
+  <video class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="auto">
+    <source src="<%= @contact.avatar.url %>" type='video/mp4' />
+  </video>
+<% end %>
 <br/>
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
