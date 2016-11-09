@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+Name: <%= @contact.name %><br/>
+File: <%= image_tag @contact.avatar(:thumb) %><br/>
+<br/>
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
